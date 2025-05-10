@@ -1,43 +1,33 @@
 {
   "basics": {
-    "name": "Your Sidebar Name",
-    "email": "none@example.org",
-    "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "name": "Ben Lau(Lau Qinghe)",
+    "email": "liuqinghe@nwafu.edu.cn",
+    "phone": "+86 13280073386",
+    "website": "https://Ben-Lau1.github.io",
+    "summary": "Recently graduated with a Bachelor's degree in Computer Science and Technology from Northwest A&F University.",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Earth",
-      "countryCode": "US",
-      "region": ""
+      "city": "Jining",
+      "countryCode": "China",
+      "region": "Shandong"
     },
     "profiles": [
       {
-        "network": "Google Scholar",
-        "username": "",
-        "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-      },
-      {
-        "network": "ORCID",
-        "username": "",
-        "url": "http://orcid.org/yourorcidurl"
-      },
-      {
         "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
+        "username": "Ben-Lau1",
+        "url": "https://Ben-Lau1.github.io"
       }
     ]
   },
   "work": [],
   "education": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
+      "institution": "Northwest A&F University(985&211 project)",
+      "area": "Bachelor in Computer Science and Technology",
       "studyType": "",
-      "startDate": "",
-      "endDate": "2018",
+      "startDate": "2020",
+      "endDate": "2024",
       "gpa": null,
       "courses": []
     },
