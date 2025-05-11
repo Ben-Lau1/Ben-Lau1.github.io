@@ -1,56 +1,37 @@
 ---
-layout: page
+layout: home
+<!-- title: Ben's Home
+subtitle: Here is everything about Ben. -->
 ---
-<div class="about-me-content-wrapper">
-    <div class="profile-header-section">
-        <div class="profile-image-container">
-            <img src="我的照片.jpg" style="width: 200px; height: 200px; border-radius: 50%;" alt="Qinghe Liu - Profile Picture" class="profile-picture-page">
+<div class="home-hero-section" style="text-align: center; margin-bottom: 40px;">
+    <img src="./我的照片.jpg" alt="Qinghe Liu - Profile Picture" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 3px solid #ddd; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    <h1 style="font-size: 2.5em; margin-top: 20px;">Ben/Qinghe Lau (Lau Qinghe)</h1>
+    <p style="font-size: 1.2em; color: #555;">student exploring 3D Computer Vision & Deep Learning  | PhD/MPhil Applicant</p>
+</div>
+
+<div class="home-introduction">
+    <p>I am Qinghe Liu, a July 2024 graduate from Northwest Agriculture and Forestry University with a Bachelor of Engineering in Computer Science and Technology (GPA: 3.79/4.0, Excellent Undergraduate Thesis). I am deeply passionate about 3D point cloud deep learning, particularly developing efficient and robust algorithms for applications in areas like smart agriculture. I am currently seeking a Ph.D. position to contribute to cutting-edge research in this exciting field.</p>
+</div>
+
+<div class="home-highlights" style="margin-top: 40px; margin-bottom: 40px;">
+    <h2 style="text-align: center; margin-bottom: 30px;">Key Highlights</h2>
+    <div class="row"> <div class="col-md-4" style="text-align: center; padding: 15px;">
+            <h4>Innovative Algorithm Design</h4>
+            <p>Led the development of FSDNet, Point HorNet, and GPFEnet, novel deep learning models for point clouds, with work published in CEA and accepted at ICVR & IJCNN.</p>
         </div>
-        <div class="profile-title-container">
-            <h1 class="page-title">Ben Lau <span class="chinese-name">(Lau Qinghe)</span></h1>
-            <p class="profile-tagline">B.Eng. in Computer Science & Technology | Student exploring 3D Point Cloud Deep Learning</p>
+        <div class="col-md-4" style="text-align: center; padding: 15px;">
+            <h4>Extensive Project Experience</h4>
+            <p>Deeply involved as a leader or core member in multiple research projects, covering the full pipeline from dataset creation to algorithm validation.</p>
         </div>
-    </div>
-
-    <div class="profile-main-content">
-        <p>I graduated from Northwest Agriculture and Forestry University in July 2024 with a Bachelor's
-             degree in Computer Science and Technology (GPA: 3.79/4.0, Rank: 2/131), and my undergraduate thesis was 
-             recognized as an Excellent Undergraduate Thesis. During my undergraduate studies, I developed
-              a profound interest in computer vision, particularly in 3D point cloud processing and 
-              analysis.</p>
-        <p>My academic journey began with implementing and comparing classical point cloud deep learning 
-            frameworks (such as PointNet++ and PAConv) on agricultural fruit point cloud datasets. 
-            This initial experience provided me with a foundational understanding of the research directions and technical challenges in point cloud deep learning.</p>
-        <p>Subsequently, as a team leader (of 5 members), I delved deeper into "Research on Segmentation 
-            and Recognition of Three-Dimensional Fruit Traits Based on Point Cloud Deep Learning" (06/2022 – 06/2024). In this project, we not only constructed a strawberry point cloud dataset under complex scenarios but also innovatively designed a density-based feature extraction and feature spreading network, <strong>FSDNet</strong>, tailored for agricultural picking scenarios, which significantly improved segmentation accuracy. This work has been published in <em>Computers and Electronics in Agriculture</em> (SCI Q1 IF: 8.3). Furthermore, as a core member, I contributed to the "Design and Research of Point Cloud Neural Network Based on High-Order Feature Interaction" project, where we adapted the HorNet architecture from the image domain to point clouds, developing <strong>Point HorNet</strong>. This network achieved excellent performance on the Stanford indoor point cloud dataset, and the findings were accepted by the ICVR 2024 conference. My graduation thesis focused on optimizing point cloud grouping and sampling algorithms, where I designed a grid-based sampling and grouping scheme and a lightweight network, <strong>GPFEnet</strong>, substantially enhancing algorithmic efficiency. This research has been accepted by the IJCNN 2025 conference.</p>
-        <p>These research experiences have provided me with a comprehensive and in-depth understanding 
-            of the entire point cloud deep learning pipeline, from dataset construction, algorithm design 
-            and improvement, code implementation and debugging, to manuscript writing and publication. 
-            I am proficient in Python, C/C++, and CUDA C programming, adept with deep learning frameworks 
-            like PyTorch, and skilled in conducting research and development efficiently within a Linux 
-            environment.</p>
-
-        <h2 class="section-title">Research Interests</h2>
-        <ul class="custom-list">
-            <li><strong>Efficient Vision Processing Algorithms:</strong> 
-                Including but not limited to segmentation, recognition, registration, 
-                and their robustness in complex scenes.</li>
-            <li><strong>Lightweight Neural Network Design:</strong> 
-                Exploring methods to reduce model complexity while maintaining high performance, 
-                to meet the demands of real-world applications (e.g., agricultural automation,
-                 robotic perception).</li>
-            <li><strong>Fusion of Vision with Other Modalities:</strong>
-                 Explore multimodal learning methods, such as cross-modal learning between images and text, 
-                 point clouds and RGB images</li>
-            <li><strong>Cutting-edge Applications and Challenges of Deep Learning </strong>
-                in Smart Agriculture, Autonomous Driving, 
-                3D Reconstruction.</li>
-        </ul>
-
-        <h2 class="section-title">Future Aspirations</h2>
-        <p>I am eager to join a dynamic and innovative research team to pursue a PhD/MPhil degree, 
-            where, if possible, I can continue my exploration at the forefront of 3D computer vision and deep learning. 
-            I am committed to applying research outcomes to solve complex real-world 
-            problems and look forward to making meaningful contributions to 3D computer vision/deep learning/machine learning.</p>
+        <div class="col-md-4" style="text-align: center; padding: 15px;">
+            <h4>Strong Academic Record</h4>
+            <p>Graduated with a GPA of 3.79/4.0(90.64), Rank:2/132, received the National Scholarship, and was awarded for an Excellent Undergraduate Thesis.</p>
+        </div>
     </div>
 </div>
+
+<div class="home-navigation" style="text-align: center; margin-top: 30px;">
+    <a href="https://ben-lau1.github.io/projects" style="display: inline-block; margin: 10px; padding: 12px 25px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Explore Projects</a>
+    <a href="https://ben-lau1.github.io/publications" style="display: inline-block; margin: 10px; padding: 12px 25px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px;">View Publications</a>
+    <a href="https://ben-lau1.github.io/aboutme" style="display: inline-block; margin: 10px; padding: 12px 25px; background-color: #17a2b8; color: white; text-decoration: none; border-radius: 5px;">About Me</a>
+    </div>
