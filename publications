@@ -1,0 +1,128 @@
+---
+layout: post
+---
+<li class="publication-item">
+    <div class="publication-item-flex-container"> <div class="publication-image-container">
+            <img src="[论文配图的路径/例如：/assets/img/fsdnet_overview.png]" alt="FSDNet 成果示意图" class="publication-thumbnail">
+        </div>
+        <div class="publication-details">
+            <p class="authors"><strong>刘清河</strong>, [其他作者 - 请补充]</p>
+            <p class="title">FSDNET: A Features Spreading Net with Density for 3D Segmentation in Agriculture</p>
+            <p class="venue"><em>Computers and Electronics in Agriculture</em>, 2024年5月. (影响因子: 8.3, ISSN: 0168-1699)</p>
+            <p class="links">
+                <a href="[实际的DOI链接]" target="_blank" class="pub-link">[DOI]</a>
+                <a href="[PDF链接，如果可用]" target="_blank" class="pub-link">[PDF]</a>
+                <a href="[代码链接，如果可用]" target="_blank" class="pub-link">[代码]</a>
+            </p>
+            <div class="abstract-container">
+                <p class="abstract-title"><strong>摘要：</strong></p>
+                <p class="abstract-text">[此处粘贴FSDNet的论文摘要...]</p>
+            </div>
+        </div>
+    </div>
+</li>
+
+<li class="publication-item">
+    <div class="publication-item-flex-container"> <div class="publication-image-container">
+            <img src="[PATH_TO_PAPER_IMAGE/e.g.,_/assets/img/fsdnet_overview.png]" alt="FSDNet Result Overview" class="publication-thumbnail">
+        </div>
+        <div class="publication-details">
+            <p class="authors"><strong>Liu, Q.</strong>, [Other Authors - please complete]</p>
+            <p class="title">FSDNET: A Features Spreading Net with Density for 3D Segmentation in Agriculture</p>
+            <p class="venue"><em>Computers and Electronics in Agriculture</em>, May 2024. (Impact Factor: 8.3, ISSN: 0168-1699)</p>
+            <p class="links">
+                <a href="[ACTUAL_DOI_LINK]" target="_blank" class="pub-link">[DOI]</a>
+                <a href="[PDF_LINK_IF_AVAILABLE]" target="_blank" class="pub-link">[PDF]</a>
+                <a href="[CODE_LINK_IF_AVAILABLE]" target="_blank" class="pub-link">[Code]</a>
+            </p>
+            <div class="abstract-container">
+                <p class="abstract-title"><strong>Abstract:</strong></p>
+                <p class="abstract-text">[Paste the abstract for FSDNet here...]</p>
+            </div>
+        </div>
+    </div>
+</li>
+
+<li class="publication-item">
+    <div class="publication-item-flex-container"> <div class="publication-image-container">
+            <img src="[论文配图的路径/例如：/assets/img/fsdnet_overview.png]" alt="FSDNet 成果示意图" class="publication-thumbnail">
+        </div>
+        <div class="publication-details">
+            <p class="authors"><strong>刘清河</strong>, [其他作者 - 请补充]</p>
+            <p class="title">FSDNET: A Features Spreading Net with Density for 3D Segmentation in Agriculture</p>
+            <p class="venue"><em>Computers and Electronics in Agriculture</em>, 2024年5月. (影响因子: 8.3, ISSN: 0168-1699)</p>
+            <p class="links">
+                <a href="[实际的DOI链接]" target="_blank" class="pub-link">[DOI]</a>
+                <a href="[PDF链接，如果可用]" target="_blank" class="pub-link">[PDF]</a>
+                <a href="[代码链接，如果可用]" target="_blank" class="pub-link">[代码]</a>
+            </p>
+            <div class="abstract-container">
+                <p class="abstract-title"><strong>摘要：</strong></p>
+                <p class="abstract-text">[此处粘贴FSDNet的论文摘要...]</p>
+            </div>
+        </div>
+    </div>
+</li>
+
+<li class="publication-item">
+    <div class="publication-item-flex-container"> <div class="publication-image-container">
+            <img src="[PATH_TO_PAPER_IMAGE/e.g.,_/assets/img/fsdnet_overview.png]" alt="FSDNet Result Overview" class="publication-thumbnail">
+        </div>
+        <div class="publication-details">
+            <p class="authors"><strong>Liu, Q.</strong>, [Other Authors - please complete]</p>
+            <p class="title">FSDNET: A Features Spreading Net with Density for 3D Segmentation in Agriculture</p>
+            <p class="venue"><em>Computers and Electronics in Agriculture</em>, May 2024. (Impact Factor: 8.3, ISSN: 0168-1699)</p>
+            <p class="links">
+                <a href="[ACTUAL_DOI_LINK]" target="_blank" class="pub-link">[DOI]</a>
+                <a href="[PDF_LINK_IF_AVAILABLE]" target="_blank" class="pub-link">[PDF]</a>
+                <a href="[CODE_LINK_IF_AVAILABLE]" target="_blank" class="pub-link">[Code]</a>
+            </p>
+            <div class="abstract-container">
+                <p class="abstract-title"><strong>Abstract:</strong></p>
+                <p class="abstract-text">[Paste the abstract for FSDNet here...]</p>
+            </div>
+        </div>
+    </div>
+</li>
+
+<li class="publication-item">
+    <div class="publication-item-flex-container"> <div class="publication-image-container">
+            <img src="[论文配图的路径/例如：/assets/img/fsdnet_overview.png]" alt="FSDNet 成果示意图" class="publication-thumbnail">
+        </div>
+        <div class="publication-details">
+            <p class="authors"><strong>刘清河</strong>, [其他作者 - 请补充]</p>
+            <p class="title">FSDNET: A Features Spreading Net with Density for 3D Segmentation in Agriculture</p>
+            <p class="venue"><em>Computers and Electronics in Agriculture</em>, 2024年5月. (影响因子: 8.3, ISSN: 0168-1699)</p>
+            <p class="links">
+                <a href="[实际的DOI链接]" target="_blank" class="pub-link">[DOI]</a>
+                <a href="[PDF链接，如果可用]" target="_blank" class="pub-link">[PDF]</a>
+                <a href="[代码链接，如果可用]" target="_blank" class="pub-link">[代码]</a>
+            </p>
+            <div class="abstract-container">
+                <p class="abstract-title"><strong>摘要：</strong></p>
+                <p class="abstract-text">[此处粘贴FSDNet的论文摘要...]</p>
+            </div>
+        </div>
+    </div>
+</li>
+
+<li class="publication-item">
+    <div class="publication-item-flex-container"> <div class="publication-image-container">
+            <img src="[PATH_TO_PAPER_IMAGE/e.g.,_/assets/img/fsdnet_overview.png]" alt="FSDNet Result Overview" class="publication-thumbnail">
+        </div>
+        <div class="publication-details">
+            <p class="authors"><strong>Liu, Q.</strong>, [Other Authors - please complete]</p>
+            <p class="title">FSDNET: A Features Spreading Net with Density for 3D Segmentation in Agriculture</p>
+            <p class="venue"><em>Computers and Electronics in Agriculture</em>, May 2024. (Impact Factor: 8.3, ISSN: 0168-1699)</p>
+            <p class="links">
+                <a href="[ACTUAL_DOI_LINK]" target="_blank" class="pub-link">[DOI]</a>
+                <a href="[PDF_LINK_IF_AVAILABLE]" target="_blank" class="pub-link">[PDF]</a>
+                <a href="[CODE_LINK_IF_AVAILABLE]" target="_blank" class="pub-link">[Code]</a>
+            </p>
+            <div class="abstract-container">
+                <p class="abstract-title"><strong>Abstract:</strong></p>
+                <p class="abstract-text">[Paste the abstract for FSDNet here...]</p>
+            </div>
+        </div>
+    </div>
+</li>
