@@ -1,0 +1,263 @@
+---
+layout: default
+<!-- title: Ben's Home
+subtitle: Here is everything about Ben. -->
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Award Certificate Showcase - Liu Qinghe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .award-item {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        .award-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .award-item h2 {
+            color: #3498db;
+            font-size: 1.5em;
+            margin-top: 0;
+        }
+        .award-item p {
+            margin: 5px 0;
+            line-height: 1.6;
+        }
+        .award-item strong {
+            color: #555;
+        }
+        .award-level {
+            font-style: italic;
+            color: #7f8c8d;
+        }
+        .award-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+        }
+        .hidden {
+            display: none; /* Initially hide images */
+        }
+        .toggle-image-btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin-top: 5px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .toggle-image-btn:hover {
+            background-color: #2980b9;
+        }
+
+        @media (min-width: 768px) {
+            .award-item {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .award-details {
+                flex: 2;
+                padding-right: 20px;
+            }
+            .award-image-container {
+                flex: 1;
+                max-width: 300px; /* Limit image container width on larger screens */
+            }
+            .award-image {
+                max-height: 400px; /* Limit image height to prevent overly large images */
+                object-fit: contain; /* Ensure image aspect ratio is maintained */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Award Certificate Showcase</h1>
+
+        <div class="award-item">
+            <div class="award-details">
+                <h2>National Scholarship Certificate <span class="award-level">(National Level)</span></h2>
+                <p><strong>Recipient:</strong> Liu Qinghe</p>
+                <p><strong>Academic Year:</strong> 2020 to 2021</p>
+                <p><strong>Issuing Authority:</strong> Ministry of Education of the People's Republic of China</p>
+                <p><strong>Date of Issue:</strong> December 31, 2021</p>
+                <button class="toggle-image-btn" onclick="toggleImage('img1')">Show/Hide Certificate</button>
+            </div>
+            <div class="award-image-container">
+                 <img src="微信图片_20250512145824.jpg" alt="National Scholarship Certificate" class="award-image hidden" id="img1">
+            </div>
+        </div>
+
+        <div class="award-item">
+            <div class="award-details">
+                <h2>24th China Robot and Artificial Intelligence Competition - National Final <span class="award-level">(National Level Competition)</span></h2>
+                <p><strong>Award:</strong> Second Prize, AI Innovation Competition</p>
+                <p><strong>Team:</strong> Northwest A&F University Representative Team</p>
+                <p><strong>Team Members:</strong> Liu Qinghe, Wei Junjie, Zhang Yuxuan</p>
+                <p><strong>Advisors:</strong> Yang Huijun, Wang Xin</p>
+                <p><strong>Issuing Authority:</strong> Organizing Committee of China Robot and Artificial Intelligence Competition</p>
+                <button class="toggle-image-btn" onclick="toggleImage('img2')">Show/Hide Certificate</button>
+            </div>
+            <div class="award-image-container">
+                <img src="微信图片_202505121455331.jpg" alt="24th China Robot and Artificial Intelligence Competition - National Final" class="award-image hidden" id="img2">
+            </div>
+        </div>
+
+        <div class="award-item">
+            <div class="award-details">
+                <h2>2021 National College Students Mathematical Contest in Modeling <span class="award-level">(National Level Competition)</span></h2>
+                <p><strong>Award:</strong> Second Prize, Shaanxi Division (Undergraduate Group)</p>
+                <p><strong>University:</strong> Northwest A&F University</p>
+                <p><strong>Students:</strong> Liu Qinghe, Yang Yingmei, Jia Zixian</p>
+                <p><strong>Advisor:</strong> Wang Tingting</p>
+                <p><strong>Issuing Authorities:</strong> China Society for Industrial and Applied Mathematics, Shaanxi Provincial Department of Education</p>
+                <p><strong>Date of Issue:</strong> December 2021</p>
+                <button class="toggle-image-btn" onclick="toggleImage('img3')">Show/Hide Certificate</button>
+            </div>
+            <div class="award-image-container">
+                <img src="微信图片_20250512145528.jpg" alt="2021 National College Students Mathematical Contest in Modeling" class="award-image hidden" id="img3">
+            </div>
+        </div>
+
+        <div class="award-item">
+            <div class="award-details">
+                <h2>24th China Robot and Artificial Intelligence Competition (Shaanxi Division) <span class="award-level">(Provincial Level Competition)</span></h2>
+                <p><strong>Award:</strong> First Prize, AI Innovation Project</p>
+                <p><strong>Team:</strong> Northwest A&F University Representative Team</p>
+                <p><strong>Participating Students:</strong> Liu Qinghe, Wei Junjie, Zhang Yuxuan</p>
+                <p><strong>Advisors:</strong> Yang Huijun, Wang Xin</p>
+                <p><strong>Certificate No.:</strong> CRAIC2022JA07GDEJ</p>
+                <p><strong>Issuing Authority:</strong> Organizing Committee of China Robot and Artificial Intelligence Competition (Shaanxi Division)</p>
+                <p><strong>Date of Issue:</strong> August 2022</p>
+                <button class="toggle-image-btn" onclick="toggleImage('img4')">Show/Hide Certificate</button>
+            </div>
+            <div class="award-image-container">
+                <img src="微信图片_20250512145534.jpg" alt="24th China Robot and Artificial Intelligence Competition (Shaanxi Division)" class="award-image hidden" id="img4">
+            </div>
+        </div>
+
+        <div class="award-item">
+            <div class="award-details">
+                <h2>25th China Robot and Artificial Intelligence Competition (Shaanxi Division) <span class="award-level">(Provincial Level Competition)</span></h2>
+                <p><strong>Award:</strong> Third Prize, AI Innovation Project</p>
+                <p><strong>Team:</strong> Northwest A&F University Representative Team</p>
+                <p><strong>Participating Students:</strong> Yuan Hao, Liu Linqing, Liu Qinghe</p>
+                <p><strong>Advisor:</strong> Yang Huijun</p>
+                <p><strong>Certificate No.:</strong> CRAIC2023X8UEXFMJ</p>
+                <p><strong>Issuing Authority:</strong> Organizing Committee of China Robot and Artificial Intelligence Competition (Shaanxi Division)</p>
+                <p><strong>Date of Issue:</strong> June 2023</p>
+                <button class="toggle-image-btn" onclick="toggleImage('img5')">Show/Hide Certificate</button>
+            </div>
+            <div class="award-image-container">
+                <img src="微信图片_20250512145535.jpg" alt="25th China Robot and Artificial Intelligence Competition (Shaanxi Division)" class="award-image hidden" id="img5">
+            </div>
+        </div>
+
+        <div class="award-item">
+            <div class="award-details">
+                <h2>2021 China Collegiate Computer Design Competition (Northwest Regional) <span class="award-level">(Regional Level Competition)</span></h2>
+                <p><strong>Work:</strong> "Analysis and Visualization of User Online Shopping Behavior Based on Big Data"</p>
+                <p><strong>Award:</strong> Second Prize</p>
+                <p><strong>Authors:</strong> Zhong Huang, Liu Qinghe, Deng Rui</p>
+                <p><strong>Advisor:</strong> Yang Huijun</p>
+                <p><strong>Work No.:</strong> XBS-21-2340</p>
+                <p><strong>Issuing Authority:</strong> Organizing Committee of China Collegiate Computer Design Competition (Northwest Regional)</p>
+                <p><strong>Date of Issue:</strong> May 2021</p>
+                <button class="toggle-image-btn" onclick="toggleImage('img6')">Show/Hide Certificate</button>
+            </div>
+            <div class="award-image-container">
+                <img src="微信图片_20250512145533.jpg" alt="2021 China Collegiate Computer Design Competition (Northwest Regional)" class="award-image hidden" id="img6">
+            </div>
+        </div>
+
+        <div class="award-item">
+            <div class="award-details">
+                <h2>2022 China Collegiate Computer Design Competition (Northwest Regional) <span class="award-level">(Regional Level Competition)</span></h2>
+                <p><strong>Work:</strong> "Fragrant Flora, Ingenious Craftsmanship"</p>
+                <p><strong>Award:</strong> Second Prize</p>
+                <p><strong>Authors:</strong> Liu Qinghe, Zhang Yuxuan, Yang Shuo</p>
+                <p><strong>Advisors:</strong> Yang Huijun, Wang Xin</p>
+                <p><strong>Work No.:</strong> XBS-22-2464</p>
+                <p><strong>Issuing Authority:</strong> Organizing Committee of China Collegiate Computer Design Competition (Northwest Regional)</p>
+                <p><strong>Date of Issue:</strong> May 2022</p>
+                <button class="toggle-image-btn" onclick="toggleImage('img7')">Show/Hide Certificate</button>
+            </div>
+            <div class="award-image-container">
+                <img src="微信图片_202505121455351.jpg" alt="2022 China Collegiate Computer Design Competition (Northwest Regional)" class="award-image hidden" id="img7">
+            </div>
+        </div>
+
+        <div class="award-item">
+            <div class="award-details">
+                <h2>President's Scholarship <span class="award-level">(University Level)</span></h2>
+                <p><strong>Recipient:</strong> Liu Qinghe</p>
+                <p><strong>Academic Year:</strong> 2021-2022</p>
+                <p><strong>Issuing Authority:</strong> Northwest A&F University</p>
+                <p><strong>Date of Issue:</strong> December 2022</p>
+                <button class="toggle-image-btn" onclick="toggleImage('img8')">Show/Hide Certificate</button>
+            </div>
+            <div class="award-image-container">
+                <img src="微信图片_20250512145525.jpg" alt="President's Scholarship" class="award-image hidden" id="img8">
+            </div>
+        </div>
+
+        <div class="award-item">
+            <div class="award-details">
+                <h2>Outstanding Undergraduate Thesis <span class="award-level">(College/Department Level)</span></h2>
+                <p><strong>Recipient:</strong> Liu Qinghe</p>
+                <p><strong>Thesis Title:</strong> "Comprehensive Analysis and Research on Point Cloud Group Sampling Algorithms"</p>
+                <p><strong>Graduating Class:</strong> 2024</p>
+                <p><strong>Advisor:</strong> Yang Huijun</p>
+                <p><strong>Issuing Authority:</strong> College of Information Engineering, Northwest A&F University</p>
+                <p><strong>Date of Issue:</strong> June 2024</p>
+                <button class="toggle-image-btn" onclick="toggleImage('img9')">Show/Hide Certificate</button>
+            </div>
+            <div class="award-image-container">
+                <img src="微信图片_20250512145526.jpg" alt="Outstanding Undergraduate Thesis" class="award-image hidden" id="img9">
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleImage(imgId) {
+            var img = document.getElementById(imgId);
+            if (img.classList.contains('hidden')) {
+                img.classList.remove('hidden');
+            } else {
+                img.classList.add('hidden');
+            }
+        }
+    </script>
+
+</body>
+</html>

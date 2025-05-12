@@ -1,43 +1,245 @@
 ---
-layout: home
-<!-- title: Ben's Home
-subtitle: Here is everything about Ben. -->
+layout: default
 ---
-<div class="home-hero-section" style="text-align: center; margin-bottom: 40px;">
-    <img src="./我的照片.jpg" alt="Qinghe Liu - Profile Picture" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 3px solid #ddd; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-    <h1 style="font-size: 2.5em; margin-top: 20px;">Ben/Qinghe Lau (Liu Qinghe)</h1>
-    <p style="font-size: 1.2em; color: #555;">3D Computer Vision & Deep Learning Student Researcher| PhD/MPhil Applicant</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben/Qinghe Lau - Personal Page</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; /* Light gray background */
+            color: #343a40; /* Darker text for better readability */
+        }
 
-<div class="home-introduction">
-    <p>I am Qinghe Lau, a July 2024 graduate from Northwest Agriculture and Forestry University with a 
+        .page-container { /* Renamed from .container to avoid Jekyll conflicts if any */
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3, h4 {
+            margin-top: 0;
+            font-weight: 600; /* Slightly bolder headings */
+        }
+
+        /* Hero Section */
+        .home-hero-section {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #ffffff; /* White background for hero */
+            border-bottom: 1px solid #e9ecef;
+            margin-bottom: 30px; /* Adjusted from 40px */
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .home-hero-section img {
+            width: 160px; /* Slightly larger */
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 25px; /* Increased margin */
+            border: 6px solid #ffffff; /* White border to lift it */
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* More pronounced shadow */
+            transition: transform 0.3s ease-in-out;
+        }
+        .home-hero-section img:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+        }
+
+        .home-hero-section h1 {
+            font-size: 2.8em; /* Adjusted size */
+            margin-bottom: 10px; /* Reduced margin-top from p */
+            color: #2c3e50; /* Dark blue for name */
+        }
+
+        .home-hero-section .subtitle { /* Added class for subtitle */
+            font-size: 1.25em; /* Adjusted size */
+            color: #495057; /* Softer color for subtitle */
+            margin-bottom: 0;
+        }
+
+        /* Introduction Section */
+        .home-introduction {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+            text-align: justify; /* Justified text for a cleaner look */
+        }
+
+        .home-introduction p {
+            font-size: 1.1em;
+            color: #495057;
+            line-height: 1.7;
+        }
+
+        /* Highlights Section */
+        .home-highlights {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            padding: 30px 20px;
+             background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .home-highlights h2 {
+            text-align: center;
+            margin-bottom: 35px; /* Increased margin */
+            font-size: 2.2em;
+            color: #2c3e50;
+        }
+
+        .highlights-row { /* Replaces .row for clarity and custom styling */
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Space between cards */
+            justify-content: center;
+        }
+
+        .highlight-card { /* Replaces .col-md-4 */
+            flex: 1 1 300px; /* Flex properties for responsiveness */
+            min-width: 280px; /* Minimum width for smaller screens */
+            background-color: #f8f9fa; /* Slightly off-white card background */
+            padding: 25px;
+            border-radius: 8px;
+            text-align: left; /* Changed to left for better readability of content */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+        }
+
+        .highlight-card h4 {
+            font-size: 1.4em;
+            color: #007bff; /* Primary color for highlight titles */
+            margin-bottom: 10px;
+        }
+
+        .highlight-card p {
+            font-size: 1em;
+            color: #5a6268;
+            line-height: 1.6;
+        }
+
+        /* Navigation Section */
+        .home-navigation {
+            text-align: center;
+            margin-top: 40px; /* Increased margin */
+            padding: 30px 0;
+        }
+
+        .home-navigation a {
+            display: inline-block;
+            margin: 8px 12px; /* Adjusted margin */
+            padding: 14px 28px; /* Adjusted padding */
+            color: white;
+            text-decoration: none;
+            border-radius: 25px; /* Pill-shaped buttons */
+            font-weight: 500; /* Medium font weight */
+            font-size: 1.05em;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .home-navigation a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .nav-cv { background-color: #007bff; } /* Blue */
+        .nav-cv:hover { background-color: #0056b3; }
+
+        .nav-publications { background-color: #28a745; } /* Green */
+        .nav-publications:hover { background-color: #1e7e34; }
+
+        .nav-rp { background-color: #17a2b8; } /* Teal */
+        .nav-rp:hover { background-color: #117a8b; }
+
+
+        /* Responsive adjustments (Basic) */
+        @media (max-width: 768px) {
+            .home-hero-section h1 {
+                font-size: 2.2em;
+            }
+            .home-hero-section .subtitle {
+                font-size: 1.1em;
+            }
+            .highlight-card {
+                flex-basis: calc(50% - 10px); /* Two cards per row on medium screens */
+            }
+        }
+        @media (max-width: 576px) {
+            .highlight-card {
+                flex-basis: 100%; /* One card per row on small screens */
+            }
+            .home-navigation a {
+                display: block; /* Stack buttons vertically */
+                margin: 10px auto; /* Center block buttons */
+                width: 80%;
+                max-width: 280px;
+            }
+            .home-introduction {
+                text-align: left; /* Left align on small screens if justify looks odd */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="page-container">
+
+    <div class="home-hero-section">
+        <img src="./我的照片.jpg" alt="Qinghe Liu - Profile Picture">
+        <h1>Ben/Qinghe Lau (Liu Qinghe)</h1>
+        <p class="subtitle">3D Computer Vision & Deep Learning Student Researcher | PhD/MPhil Applicant</p>
+    </div>
+
+    <div class="home-introduction">
+        <p>I am Qinghe Lau, a July 2024 graduate from Northwest Agriculture and Forestry University with a 
         Bachelor of Engineering in Computer Science and Technology (GPA: 3.79/4.0, Excellent 
         Undergraduate Thesis). 
         I am deeply passionate about 3D point cloud deep learning, particularly developing efficient 
         and robust algorithms for applications in areas like smart agriculture. I am currently seeking 
         a PhD/MPhil position to contribute to cutting-edge research in this exciting field.</p>
-</div>
+    </div>
 
-<div class="home-highlights" style="margin-top: 40px; margin-bottom: 40px;">
-    <h2 style="text-align: center; margin-bottom: 30px;">Key Highlights</h2>
-    <div class="row"> <div class="col-md-4" style="text-align: center; padding: 15px;">
-            <h4>Innovative Algorithm Design</h4>
-            <p>Led the development of FSDNet, Point HorNet, and GPFEnet, novel deep learning models for point clouds, with work published in CEA and accepted at ICVR & IJCNN.</p>
-        </div>
-        <div class="col-md-4" style="text-align: center; padding: 15px;">
-            <h4>Extensive Project Experience</h4>
-            <p>Deeply involved as a leader or core member in multiple research projects, covering the full pipeline from dataset creation to algorithm validation.</p>
-        </div>
-        <div class="col-md-4" style="text-align: center; padding: 15px;">
-            <h4>Strong Academic Record</h4>
-            <p>Graduated with a GPA of 3.79/4.0(90.64), Rank:2/132, received the National Scholarship, and was awarded for an Excellent Undergraduate Thesis.</p>
+    <div class="home-highlights">
+        <h2>Key Highlights</h2>
+        <div class="highlights-row">
+            <div class="highlight-card">
+                <h4>Innovative Algorithm Design</h4>
+                <p>Led the development of FSDNet, Point HorNet, and GPFEnet, novel deep learning models for point clouds, with work published in CEA and accepted at ICVR & IJCNN.</p>
+            </div>
+            <div class="highlight-card">
+                <h4>Extensive Project Experience</h4>
+                <p>Deeply involved as a leader or core member in multiple research projects, covering the full pipeline from dataset creation to algorithm validation.</p>
+            </div>
+            <div class="highlight-card">
+                <h4>Strong Academic Record</h4>
+                <p>Graduated with a GPA of 3.79/4.0 (90.64), Rank: 2/131, received the National Scholarship, and was awarded for an Excellent Undergraduate Thesis.</p>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="home-navigation" style="text-align: center; margin-top: 30px;">
-    <!-- <a href="https://ben-lau1.github.io/CV" style="display: inline-block; margin: 10px; padding: 12px 25px; background-color: #86df2e; color: white; text-decoration: none; border-radius: 5px;">View My CV</a> -->
-    <a href="https://ben-lau1.github.io/CV" style="display: inline-block; margin: 10px; padding: 12px 25px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">View My CV</a>
-    <a href="https://ben-lau1.github.io/publications" style="display: inline-block; margin: 10px; padding: 12px 25px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px;">Explore Publications</a>
-    <a href="https://ben-lau1.github.io/RP.pdf" style="display: inline-block; margin: 10px; padding: 12px 25px; background-color: #17a2b8; color: white; text-decoration: none; border-radius: 5px;">Check My RP</a>
+    <div class="home-navigation">
+        <a href="https://ben-lau1.github.io/CV" class="nav-cv">View My CV</a>
+        <a href="https://ben-lau1.github.io/publications" class="nav-publications">Explore Publications</a>
+        <a href="https://ben-lau1.github.io/RP.pdf" class="nav-rp">Check My RP</a>
     </div>
+
+</div> </body>
+</html>

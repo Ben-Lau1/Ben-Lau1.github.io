@@ -1,10 +1,178 @@
 ---
-layout: page
+layout: default
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Ben Lau (Liu Qinghe)</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7; /* Slightly increased line height for readability */
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; /* Light gray background */
+            color: #343a40; /* Main text color */
+        }
+
+        .about-me-content-wrapper {
+            max-width: 900px; /* Max width for the content */
+            margin: 30px auto; /* Centering and top/bottom margin */
+            padding: 20px;
+            background-color: #ffffff; /* White background for content area */
+            border-radius: 8px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.07); /* Softer, more spread shadow */
+        }
+
+        h1, h2 {
+            font-weight: 600;
+            color: #2c3e50; /* Dark blue-gray for titles */
+        }
+
+        /* Profile Header Section */
+        .profile-header-section {
+            display: flex;
+            align-items: center;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #e9ecef; /* Separator line */
+        }
+
+        .profile-image-container {
+            margin-right: 30px; /* Space between image and text */
+            flex-shrink: 0; /* Prevent image from shrinking */
+        }
+
+        .profile-picture-page {
+            width: 180px; /* Adjusted size */
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover; /* Ensure image covers the area well */
+            border: 5px solid #ffffff; /* White border */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.12); /* Shadow for depth */
+        }
+
+        .profile-title-container {
+            flex-grow: 1; /* Allow text container to take remaining space */
+        }
+
+        .page-title { /* h1 */
+            font-size: 2.6em;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        .chinese-name {
+            font-size: 0.7em; /* Smaller size for Chinese name */
+            font-weight: 400; /* Lighter weight */
+            color: #5a6268; /* Softer color */
+        }
+
+        .profile-tagline { /* p */
+            font-size: 1.15em;
+            color: #495057; /* Slightly lighter than main text */
+            margin-top: 0;
+            margin-bottom: 0;
+            font-weight: 300; /* Lighter tagline */
+        }
+
+        /* Profile Main Content */
+        .profile-main-content p {
+            font-size: 1.05em; /* Slightly larger paragraph text */
+            color: #343a40;
+            margin-bottom: 1.2em;
+            text-align: justify; /* Justified text for a formal look */
+        }
+        .profile-main-content p strong {
+            color: #007bff; /* Highlight key terms with primary color */
+            font-weight: 600;
+        }
+
+        .section-title { /* h2 */
+            font-size: 1.8em;
+            margin-top: 40px; /* Space above section titles */
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #007bff; /* Accent border for section titles */
+            display: inline-block; /* To make border only as wide as text */
+        }
+
+        /* Custom List for Research Interests */
+        .custom-list {
+            list-style: none; /* Remove default bullets */
+            padding-left: 0;
+        }
+
+        .custom-list li {
+            font-size: 1.05em;
+            padding-left: 25px; /* Indentation for list items */
+            margin-bottom: 12px; /* Space between list items */
+            position: relative; /* For custom bullet positioning */
+        }
+
+        .custom-list li::before {
+            content: "▹"; /* Custom bullet character (can use other symbols or FontAwesome icons) */
+            position: absolute;
+            left: 0;
+            top: 0px;
+            color: #007bff; /* Primary color for bullets */
+            font-size: 1.2em; /* Bullet size */
+            font-weight: bold;
+        }
+
+        .custom-list li strong {
+            font-weight: 600;
+            color: #2c3e50; /* Emphasize the main point of the list item */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .profile-header-section {
+                flex-direction: column; /* Stack image and text vertically */
+                text-align: center; /* Center align content in stacked view */
+            }
+
+            .profile-image-container {
+                margin-right: 0;
+                margin-bottom: 20px; /* Space below image when stacked */
+            }
+
+            .page-title {
+                font-size: 2.2em;
+            }
+
+            .profile-tagline {
+                font-size: 1.1em;
+            }
+            .profile-main-content p {
+                text-align: left; /* Left align for better readability on small screens */
+            }
+        }
+        @media (max-width: 480px) {
+            .about-me-content-wrapper {
+                margin: 15px;
+                padding: 15px;
+            }
+            .profile-picture-page {
+                width: 150px;
+                height: 150px;
+            }
+            .page-title {
+                font-size: 1.9em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
 <div class="about-me-content-wrapper">
     <div class="profile-header-section">
         <div class="profile-image-container">
-            <img src="生活照1.jpg" style="width: 200px; height: 200px; border-radius: 50%;" alt="Qinghe Liu - Profile Picture" class="profile-picture-page">
+            <img src="生活照2.jpg" alt="Qinghe Liu - Profile Picture" class="profile-picture-page">
         </div>
         <div class="profile-title-container">
             <h1 class="page-title">Ben Lau <span class="chinese-name">(Liu Qinghe)</span></h1>
@@ -14,10 +182,10 @@ layout: page
 
     <div class="profile-main-content">
         <p>I graduated from Northwest Agriculture and Forestry University in July 2024 with a Bachelor's
-             degree in Computer Science and Technology (GPA: 3.79/4.0, Rank: 2/131), and my undergraduate thesis was 
-             recognized as an Excellent Undergraduate Thesis. During my undergraduate studies, I developed
-              a profound interest in computer vision, particularly in 3D point cloud processing and 
-              analysis.</p>
+            degree in Computer Science and Technology (GPA: 3.79/4.0, Rank: 2/131), and my undergraduate thesis was 
+            recognized as an Excellent Undergraduate Thesis. During my undergraduate studies, I developed
+            a profound interest in computer vision, particularly in 3D point cloud processing and 
+            analysis.</p>
         <p>My academic journey began with implementing and comparing classical point cloud deep learning 
             frameworks (such as PointNet++ and PAConv) on agricultural fruit point cloud datasets. 
             This initial experience provided me with a foundational understanding of the research directions and technical challenges in point cloud deep learning.</p>
@@ -38,11 +206,11 @@ layout: page
             <li><strong>Lightweight Neural Network Design:</strong> 
                 Exploring methods to reduce model complexity while maintaining high performance, 
                 to meet the demands of real-world applications (e.g., agricultural automation,
-                 robotic perception).</li>
+                robotic perception).</li>
             <li><strong>Fusion of Vision with Other Modalities:</strong>
-                 Explore multimodal learning methods, such as cross-modal learning between images and text, 
-                 point clouds and RGB images</li>
-            <li><strong>Cutting-edge Applications and Challenges of Deep Learning </strong>
+                Explore multimodal learning methods, such as cross-modal learning between images and text, 
+                point clouds and RGB images.</li>
+            <li><strong>Cutting-edge Applications and Challenges of Deep Learning</strong> 
                 in Smart Agriculture, Autonomous Driving, 
                 3D Reconstruction.</li>
         </ul>
@@ -54,3 +222,6 @@ layout: page
             problems and look forward to making meaningful contributions to 3D computer vision/deep learning/machine learning.</p>
     </div>
 </div>
+
+</body>
+</html>

@@ -1,147 +1,278 @@
 ---
-layout: post
+layout: default
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Ben Lau (Liu Qinghe)</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; /* Light gray background */
+            color: #343a40; /* Main text color */
+        }
 
-    <h3> FSDNET: A Features Spreading Net with Density for 3D Segmentation in Agriculture</h3>
-    <div class="publication-item-flex-container">
-        <div class="publication-image-container">
-            <img src="FSDnet_net.png" alt="FSDNet framework" class="publication-thumbnail">
-        </div>
-        <div class="publication-details">
-            <p class="authors"><strong>Qinghe Liu</strong>, Huijun Yang , Junjie Wei , Yuxuan Zhang , Shuo Yang</p>
-            
-            <p class="venue"><em>Computers and Electronics in Agriculture</em>, May 2024. (Impact Factor: 8.3, ISSN: 0168-1699)</p>
-            <p class="links">
-                <a href="https://doi.org/10.1016/j.compag.2024.109073" target="_blank" class="pub-link">[DOI]</a>
-                <a href="1-s2.0-S0168169924004642-main.pdf" target="_blank" class="pub-link">[PDF]</a>
-                <a href="" target="_blank" class="pub-link">[Code]</a>
-            </p>
-            <details class="abstract-details">
-                <summary class="abstract-toggle">Abstract </summary>
-                <div class="abstract-content-collapsible">
-                    <p>The accurate segmentation of fruit phenotypes in the field is of great significance for agricultural automation in 
-the 3D scene. Although the existing fruit segmentation based on 3D point cloud has made great progress, in the 
-complex field environment, due to lighting, leaf occlusion, shooting angle and other problems, the point cloud 
-obtained by depth camera often has the problem of multiple voids and discrete points, which seriously affects the 
-accurate segmentation of fruit phenotype. This paper proposes a embedding subnetwork FSDnet based on 
-density-based feature extraction and feature propagation and embeds it in the novel segmentation networks, 
-which effectively improves the segmentation accuracy of the point cloud phenotype in multi-hole and multi- 
-discrete fruits, including (1) The density-based point cloud feature extraction and feature propagation theory 
-is proposed to alleviate the problem of perception degradation in fruit edge point caused by discrete points and 
-holes caused by imcomplete point cloud in the agriculture scene. (2) A density-adaptive embedding semantic 
-segmentation framework FSDnet is proposed, and embedding the classical point cloud neural network can 
-significantly improve the segmentation accuracy of the fruit phenotypes with multiple holes and discrete points 
-in the traditional network. (3) This paper made a strawberry dataset and tested the designed new neural network 
-on both strawberry and apple filed dataset. After FSDnet is embedded on different novel net, almost all net have 
-been improved. We verified the performance of FSDnet in different density states in agricultural scenarios, 
-mitigated the negative impact of density on segmentation accuracy, proving that it can adapt to different point 
-cloud density in agricultural scenarios in comparison between Gaussian density and other two traditional density 
-schemes, Gaussian density reduces the computational traffic (0.58G) of the network while maintaining similar 
-performance to the other two densities, proving the superiority of assuming a Gaussian density.  </p>
-                </div>
-            </details>
+        .publications-container { /* Wrapper for all publication entries */
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 10px; /* Reduced padding as entries will have their own */
+        }
+
+        /* Publication Entry Styling */
+        .publication-entry {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+            margin-bottom: 30px;
+            overflow: hidden; /* To contain floated elements or for flex layouts */
+        }
+        
+        .publication-entry:last-child {
+            margin-bottom: 0;
+        }
+
+        .publication-title { /* h3 */
+            font-size: 1.8em;
+            font-weight: 600;
+            color: #2c3e50; /* Dark blue-gray */
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .publication-content {
+            display: flex; /* Using flex for image and text layout */
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            gap: 25px; /* Space between image and text block */
+        }
+
+        .publication-image-container {
+            flex: 0 0 300px; /* Fixed width for image container, no grow, no shrink */
+            text-align: center; /* Center image if it's smaller than container */
+        }
+
+        .publication-image-container img {
+            max-width: 100%; /* Make image responsive within its container */
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid #e9ecef;
+            margin-bottom: 10px;
+        }
+
+        .publication-details {
+            flex: 1 1 400px; /* Allow text details to grow and shrink, base width 400px */
+        }
+
+        .publication-details p {
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 0.95em;
+            color: #495057;
+        }
+
+        .publication-details p strong { /* For labels like "Authors:", "Venue:" */
+            font-weight: 600;
+            color: #343a40;
+        }
+        .publication-details p strong.author-highlight { /* For your name */
+            color: #007bff; /* Highlight your name */
+            font-weight: 700;
+        }
+
+        .publication-details em { /* For journal/conference names */
+            font-style: italic;
+            color: #333;
+        }
+
+        .publication-links a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-right: 10px;
+            padding: 3px 6px;
+            border-radius: 4px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .publication-links a:hover {
+            background-color: #e9ecef;
+            color: #0056b3;
+        }
+        .publication-links a:last-child {
+            margin-right: 0;
+        }
+
+        /* Details/Summary for Abstract */
+        details {
+            margin-top: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 10px 15px;
+            background-color: #fdfdfd;
+        }
+
+        summary {
+            font-weight: 600;
+            color: #007bff;
+            cursor: pointer;
+            padding: 5px 0;
+            outline: none; /* Remove focus outline */
+        }
+        
+        summary::-webkit-details-marker { /* Style for Chrome/Safari */
+            color: #007bff;
+        }
+        summary::marker { /* Standard style for Firefox */
+             color: #007bff;
+        }
+
+        details[open] summary {
+            margin-bottom: 10px;
+        }
+
+        details div p { /* Abstract text */
+            font-size: 0.9em;
+            line-height: 1.6;
+            color: #555;
+            text-align: justify;
+        }
+
+        hr { /* Style the existing hr or remove if entry styling is enough */
+           display: none; /* Hiding hr as .publication-entry margin creates separation */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .publication-content {
+                flex-direction: column; /* Stack image and text */
+            }
+            .publication-image-container {
+                flex-basis: auto; /* Allow image container to take full width */
+                width: 100%;
+                margin-bottom: 15px; /* Space below image when stacked */
+            }
+            .publication-image-container img {
+                max-width: 70%; /* Don't let image be too wide on mobile */
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .publication-details {
+                flex-basis: auto; /* Allow text details to take full width */
+            }
+            .publication-title {
+                font-size: 1.6em;
+            }
+        }
+         @media (max-width: 480px) {
+            .publication-entry {
+                padding: 15px;
+            }
+            .publication-title {
+                font-size: 1.4em;
+            }
+            .publication-image-container img {
+                max-width: 90%;
+            }
+         }
+
+    </style>
+</head>
+<body>
+
+<div class="publications-container">
+
+    <div class="publication-entry">
+        <h3 class="publication-title">FSDNET: A Features Spreading Net with Density for 3D Segmentation in Agriculture</h3>
+        <div class="publication-content">
+            <div class="publication-image-container">
+                <img src="FSDnet_net.png" alt="FSDNet framework">
+            </div>
+            <div class="publication-details">
+                <p>
+                    <strong>Authors:</strong> <strong class="author-highlight">Qinghe Liu</strong>, Huijun Yang, Junjie Wei, Yuxuan Zhang, Shuo Yang
+                </p>
+                <p>
+                    <strong>Venue:</strong> <em>Computers and Electronics in Agriculture</em>, May 2024. (SCI Q1 Top Impact Factor: 8.3, ISSN: 0168-1699)
+                </p>
+                <p class="publication-links">
+                    <strong>Links:</strong>
+                    <a href="https://doi.org/10.1016/j.compag.2024.109073" target="_blank">[DOI]</a>
+                    <a href="1-s2.0-S0168169924004642-main.pdf" target="_blank">[PDF]</a>
+                    <a href="" target="_blank">[Code]</a> 
+                </p>
+                <details>
+                    <summary><strong>Abstract</strong></summary>
+                    <div>
+                        <p>The accurate segmentation of fruit phenotypes in the field is of great significance for agricultural automation in the 3D scene. Although the existing fruit segmentation based on 3D point cloud has made great progress, in the complex field environment, due to lighting, leaf occlusion, shooting angle and other problems, the point cloud obtained by depth camera often has the problem of multiple voids and discrete points, which seriously affects the accurate segmentation of fruit phenotype. This paper proposes a embedding subnetwork FSDnet based on density-based feature extraction and feature propagation and embeds it in the novel segmentation networks, which effectively improves the segmentation accuracy of the point cloud phenotype in multi-hole and multi- discrete fruits, including (1) The density-based point cloud feature extraction and feature propagation theory is proposed to alleviate the problem of perception degradation in fruit edge point caused by discrete points and holes caused by imcomplete point cloud in the agriculture scene. (2) A density-adaptive embedding semantic segmentation framework FSDnet is proposed, and embedding the classical point cloud neural network can significantly improve the segmentation accuracy of the fruit phenotypes with multiple holes and discrete points in the traditional network. (3) This paper made a strawberry dataset and tested the designed new neural network on both strawberry and apple filed dataset. After FSDnet is embedded on different novel net, almost all net have been improved. We verified the performance of FSDnet in different density states in agricultural scenarios, mitigated the negative impact of density on segmentation accuracy, proving that it can adapt to different point cloud density in agricultural scenarios in comparison between Gaussian density and other two traditional density schemes, Gaussian density reduces the computational traffic (0.58G) of the network while maintaining similar performance to the other two densities, proving the superiority of assuming a Gaussian density.</p>
+                    </div>
+                </details>
+            </div>
         </div>
     </div>
 
-
-
-
-
-
-
-<h3> Point HorNet: Higher
-Order Spatial Interaction Network for Point Clouds</h3>
-    <div class="publication-item-flex-container">
-        <div class="publication-image-container">
-            <img src="Hornet3d_net.png" alt="Framework" class="publication-thumbnail">
-        </div>
-        <div class="publication-details">
-            <p class="authors">Hao Yuan; Linqing Liu; Tingting Yan; Wenjing Zhang; <strong>Qinghe Liu;</strong>  Juanjie Wei; Ziang Wu;Huijun Yang</p>
-            
-            <p class="venue"><em>2024 10th International Conference on Virtual Reality (ICVR)</em>,July 2024. (IEEE)</p>
-            <p class="links">
-                <a href="https://doi.org/10.1109/ICVR62393.2024.10868020" target="_blank" class="pub-link">[DOI]</a>
-                <a href="PointHornet.pdf" target="_blank" class="pub-link">[PDF]</a>
-                <a href="" target="_blank" class="pub-link">[Code]</a>
-            </p>
-            <details class="abstract-details">
-                <summary class="abstract-toggle">Abstract </summary>
-                <div class="abstract-content-collapsible">
-                    <p>The progression of 3D scanning technology has am
-plified the importance of point cloud data in computer vision, 
-robotics navigation, and virtual reality. Point clouds, consisting of 
-discrete points in space, harbor rich geometric and structural 
-information. The rise of deep learning has ushered in innovative 
-methods for point cloud processing, improving the efficiency and 
-precision of tasks such as feature extraction, classification, 
-segmentation, and reconstruction. The introduction of HorNet 
-and Recursive Gated Convolution has facilitated spatial interacti
-ons of any order, addressing issues of feature loss inherent in low
-order interactions. This has resulted in significant advancements 
-in image analysis tasks, including image classification, object 
-detection, and semantic segmentation. Drawing inspiration from 
-this success, we have investigated the application of HorNet and 
-Recursive Gated Convolution to point clouds, constructing a 
-network specifically designed for semantic segmentation tasks. 
-Point HorNet has achieved commendable results in semantic 
-segmentation, attaining a mIoU of 68.1% in Area 5 and 73.6% in 
-a six-fold cross-validation on the S3DIS dataset.  </p>
-                </div>
-            </details>
+    <div class="publication-entry">
+        <h3 class="publication-title">Point HorNet: Higher Order Spatial Interaction Network for Point Clouds</h3>
+        <div class="publication-content">
+            <div class="publication-image-container">
+                <img src="Hornet3d_net.png" alt="Framework">
+            </div>
+            <div class="publication-details">
+                <p>
+                    <strong>Authors:</strong> Hao Yuan, Linqing Liu, Tingting Yan, Wenjing Zhang, <strong class="author-highlight">Qinghe Liu</strong>, Juanjie Wei, Ziang Wu, Huijun Yang
+                </p>
+                <p>
+                    <strong>Venue:</strong> <em>2024 10th International Conference on Virtual Reality (ICVR)</em>, July 2024. (IEEE)
+                </p>
+                <p class="publication-links">
+                    <strong>Links:</strong>
+                    <a href="https://doi.org/10.1109/ICVR62393.2024.10868020" target="_blank">[DOI]</a>
+                    <a href="PointHornet.pdf" target="_blank">[PDF]</a>
+                    <a href="" target="_blank">[Code]</a>
+                </p>
+                <details>
+                    <summary><strong>Abstract</strong></summary>
+                    <div>
+                        <p>The progression of 3D scanning technology has amplified the importance of point cloud data in computer vision, robotics navigation, and virtual reality. Point clouds, consisting of discrete points in space, harbor rich geometric and structural information. The rise of deep learning has ushered in innovative methods for point cloud processing, improving the efficiency and precision of tasks such as feature extraction, classification, segmentation, and reconstruction. The introduction of HorNet and Recursive Gated Convolution has facilitated spatial interactions of any order, addressing issues of feature loss inherent in low order interactions. This has resulted in significant advancements in image analysis tasks, including image classification, object detection, and semantic segmentation. Drawing inspiration from this success, we have investigated the application of HorNet and Recursive Gated Convolution to point clouds, constructing a network specifically designed for semantic segmentation tasks. Point HorNet has achieved commendable results in semantic segmentation, attaining a mIoU of 68.1% in Area 5 and 73.6% in a six-fold cross-validation on the S3DIS dataset.</p>
+                    </div>
+                </details>
+            </div>
         </div>
     </div>
 
-
-
-    <h3> GPFEnet: a lightweight grid parallel feature
- extraction net for 3D segmentation in agriculture</h3>
-    <div class="publication-item-flex-container">
-        <div class="publication-image-container">
-            <img src="GPFEnet_net.png" alt="Framework" class="publication-thumbnail">
-        </div>
-        <div class="publication-details">
-            <p class="authors">Wenjing zhang; <strong>Qinghe Liu;</strong> ; Huijun Yang; Yufeng Fan  </p>
-            
-            <p class="venue"><em>2025 International Joint Conference on Neural Networks</em>,March 2025. (CCFC)</p>
-            <p class="links">
-                <!-- <a href="" target="_blank" class="pub-link">[DOI]</a> -->
-                <a href="GPFEnet .pdf" target="_blank" class="pub-link">[PDF]</a>
-                <a href="" target="_blank" class="pub-link">[Code]</a>
-            </p>
-            <details class="abstract-details">
-                <summary class="abstract-toggle">Abstract </summary>
-                <div class="abstract-content-collapsible">
-                    <p>The real-time and accurate 3D segmentation of
- fruits in agricultural field is crucial for precision agriculture. In
- complex field scenarios, point clouds generated by depth cameras
- often have gaps and point dispersion problems, using the tradi
-tional farthest point sampling algorithm (FPS) makes it difficult
- to uniformly capture key features, and FPS requires extensive
- sorting operations, which reduces the speed of feature extraction.
- To optimize the sampling uniformity of point clouds with mul
-tiple holes in agricultural field scenes while enhancing feature
- extraction efficiency, this paper proposes a lightweight and
- efficient density-based grid parallel feature extraction network
- GPFEnet. First, an adaptive grid parallel grouping algorithm
- was designed to address the issue of low efficiency in capturing
- point cloud features caused by irregular point cloud data in
- complex field scenarios. Based on this fundamental algorithm, a
- density-based grid random sampling algorithm GDSample was
- proposed, which optimize sampling uniformity while improving
- sampling efficiency through support for parallel computation.
- Finally, the grid parallel feature extraction subnetwork GPFEnet
- was developed which can be embedded into point cloud deep
- learning networks. Testing results on field datasets show that
- the proposed GDSample algorithm is approximately 35 times
- faster than FPS, significantly accelerating feature extraction
- while ensuring more even coverage of key features. To confirm
- the superiority of GPFEnet on multi-hole fruit datasets, the
- GPFEnet was integrated into various cutting-edge point cloud
- deep learning networks, achieved a significant enhancement in
- speed of feature extraction while maintaining similar accuracy
- in fruit segmentation. The code will be publicly available after
- the paper is accepted.  </p>
-                </div>
-            </details>
+    <div class="publication-entry">
+        <h3 class="publication-title">GPFEnet: a lightweight grid parallel feature extraction net for 3D segmentation in agriculture</h3>
+        <div class="publication-content">
+            <div class="publication-image-container">
+                <img src="GPFEnet_net.png" alt="Framework">
+            </div>
+            <div class="publication-details">
+                <p>
+                    <strong>Authors:</strong> Wenjing zhang, <strong class="author-highlight">Qinghe Liu</strong>, Huijun Yang, Yufeng Fan
+                </p>
+                <p>
+                    <strong>Venue:</strong> <em>2025 International Joint Conference on Neural Networks</em>, March 2025. (CCFC)
+                </p>
+                <p class="publication-links">
+                    <strong>Links:</strong>
+                    <a href="GPFEnet .pdf" target="_blank">[PDF]</a>
+                    <a href="" target="_blank">[Code]</a>
+                </p>
+                <details>
+                    <summary><strong>Abstract</strong></summary>
+                    <div>
+                        <p>The real-time and accurate 3D segmentation of fruits in agricultural field is crucial for precision agriculture. In complex field scenarios, point clouds generated by depth cameras often have gaps and point dispersion problems, using the traditional farthest point sampling algorithm (FPS) makes it difficult to uniformly capture key features, and FPS requires extensive sorting operations, which reduces the speed of feature extraction. To optimize the sampling uniformity of point clouds with multiple holes in agricultural field scenes while enhancing feature extraction efficiency, this paper proposes a lightweight and efficient density-based grid parallel feature extraction network GPFEnet. First, an adaptive grid parallel grouping algorithm was designed to address the issue of low efficiency in capturing point cloud features caused by irregular point cloud data in complex field scenarios. Based on this fundamental algorithm, a density-based grid random sampling algorithm GDSample was proposed, which optimize sampling uniformity while improving sampling efficiency through support for parallel computation. Finally, the grid parallel feature extraction subnetwork GPFEnet was developed which can be embedded into point cloud deep learning networks. Testing results on field datasets show that the proposed GDSample algorithm is approximately 35 times faster than FPS, significantly accelerating feature extraction while ensuring more even coverage of key features. To confirm the superiority of GPFEnet on multi-hole fruit datasets, the GPFEnet was integrated into various cutting-edge point cloud deep learning networks, achieved a significant enhancement in speed of feature extraction while maintaining similar accuracy in fruit segmentation. The code will be publicly available after the paper is accepted.</p>
+                    </div>
+                </details>
+            </div>
         </div>
     </div>
+
+</div> </body>
+</html>
